@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="transparent-layer"></div>
+  <div class="difficulty-modal">
+    <h2>Choose Difficulty</h2>
+    <button class="difficulty-btn" value="EASY">Easy</button>
+    <button class="difficulty-btn" value="MEDIUM">Medium</button>
+    <button class="difficulty-btn" value="HARD">Hard</button>
+  </div>
+
+  <div class="game">
+    <div class="container">   
+      <h1>Hangman</h1>
+      <span>Find the hidden word - Enter a letter</span>
+      <div class="game-container">
+        <svg class="figure-container" width="200" height="250">
+          <line x1="10" y1="10" x2="80" y2="10"></line>
+          <line x1="80" y1="10" x2="80" y2="40"></line>
+          <line x1="10" y1="10" x2="10" y2="240"></line>
+          <line x1="10" y1="240" x2="80" y2="240"></line>
+          
+          <circle class="figure-part" cx="80" cy="62" r="20"></circle>
+          <line class="figure-part" x1="80" y1="82" x2="80" y2="170"></line>
+          <line class="figure-part" x1="80" y1="112" x2="110" y2="102"></line>
+          <line class="figure-part" x1="80" y1="112" x2="50" y2="102"></line>
+          <line class="figure-part" x1="80" y1="170" x2="50" y2="200"></line>
+          <line class="figure-part" x1="80" y1="170" x2="110" y2="200"></line>
+        </svg>
+        <div class="wrong-input">
+          <span>Wrong Letters</span>
+          <div id="wrong-list"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="answer"></div>
+    <div id="desc"></div>
+  
+    <div class="show-duplicate">
+      You have already entered this letter
+    </div>
+  
+    <div class="modal">
+      <span></span>
+      <Button id="play-again">Play Again</Button>
+    </div>
+  </div>
+</body>
+</html>

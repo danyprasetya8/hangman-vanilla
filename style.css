@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #34495E;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.game {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  color: white;
+  line-height: 50px;
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.figure-part {
+  display: none;
+}
+
+.game-container {
+  display: flex;
+  margin: 0 0 50px;
+}
+
+.wrong-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#answer span {
+  color: white;
+  text-align: center;
+  margin: 10px 5px;
+  border-bottom: 2px solid #2980B9;
+  padding: 5px 10px;
+  -webkit-user-select: none;
+}
+
+#answer span.empty {
+  border-bottom: none;
+}
+
+.figure-part.show {
+  display: block;
+}
+
+.show-duplicate {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  color: #fff;
+  background: #243342;
+  padding: 8px 20px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  transition: transform .2s ease;
+}
+
+.show-duplicate.show {
+  transform: translate(-50%, 0);
+}
+
+.transparent-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  display: none;
+}
+
+.modal {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 150px;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  background: #2980B9;
+  border-radius: 8px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  display: none;
+}
+
+#play-again {
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  width: 50%;
+}
+
+#play-again:hover, .difficulty-modal button:hover {
+  cursor: pointer;
+}
+
+.difficulty-modal button:hover {
+  background: #ccc;
+}
+
+.show-modal {
+  display: flex;
+}
+
+.difficulty-modal {
+  height: 300px;
+  width: 350px;
+  border-radius: 8px;
+  background: #243342;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  color: #fff;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.difficulty-modal button {
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  width: 70%;
+  transition: background .3s ease;
+}
+
+#desc {
+  color: #fff;
+  margin: 40px 0;
+  font-size: 28px;
+}
+
