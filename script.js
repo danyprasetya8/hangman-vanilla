@@ -15,33 +15,9 @@ const wordList = {
     {
       key: 'chair',
       desc: 'Object that always used to sit'
-    },
-    {
-      key: 'table',
-      desc: 'A Chair bestfriends'
-    },
-    {
-      key: 'summer',
-      desc: 'Season'
-    },
-    {
-      key: 'dany',
-      desc: 'Born in 3 February 1998'
     }
   ],
   MEDIUM: [
-    {
-      key: 'jesslyn',
-      desc: 'Most beautiful girl in the world'
-    },
-    {
-      key: 'jesslyn',
-      desc: 'Most beautiful girl in the world'
-    },
-    {
-      key: 'jesslyn',
-      desc: 'Most beautiful girl in the world'
-    },
     {
       key: 'transparent',
       desc: 'Colors of water'
@@ -51,10 +27,6 @@ const wordList = {
     {
       key: 'approximately',
       desc: 'Not less but not too much'
-    },
-    {
-      key: 'experience',
-      desc: '. . . is the best teacher'
     }
   ]
 }
